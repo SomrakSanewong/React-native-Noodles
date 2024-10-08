@@ -2,7 +2,6 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Splash from './screen/Splash';
-import Login from './screen/Login';
 import Singup from './screen/Singup';
 import Login4 from './screen/Login4';
 import MainContainer from './screen/MainContainer';
@@ -16,7 +15,6 @@ import PaymentScreen from './screen/PaymentScreen';
 import PointsScreen from './screen/PointsScreen';
 import Monu from './screen/Monu'; 
 import RedeemedItemsScreen from './screen/RedeemedItemsScreen';
-import AdminDashboard from './screen/AdminDashboard';
 const Stack = createStackNavigator();
 
 const App = () => {
@@ -27,11 +25,6 @@ const App = () => {
           name="Splash"
           component={Splash}
           options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="Login"
-          component={Login}
-          options={{ headerTitle: 'Login', headerBackTitle: '' }}
         />
         <Stack.Screen
           name="Singup"
@@ -96,11 +89,6 @@ const App = () => {
         <Stack.Screen
           name="RedeemedItemsScreen"
           component={RedeemedItemsScreen}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="AdminDashboard"
-          component={AdminDashboard}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
